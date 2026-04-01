@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family:
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+/* noneは、アンダーバーを消す */
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* レイアウト */
+.wrapper {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+.align-center {
+  text-align: center;
+}
+
+/* 見出し */
+.font-english {
+  font-family: "Philosopher", sans-serif;
+  font-weight: normal;
+}
+
+/* 共通のスタイルをまとめた (グループ同士は,で区切る)※慣れたらでOK*/
+.page-title,
+.heading-large,
+.heading-medium {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.page-title {
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+.heading-large {
+  margin-bottom: 1rem;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  transition: 0.5s;
+}
+.btn:hover {
+  /* background-color: #0090aa; */
+  scale: 1.2;
+  /* rotate: -5deg; */
+  /* translate: 10px; */
+}
+
+/* ↓いろいろなボタンを試す（ アウトラインボタン） */
+/* .btn-outline {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+} */
+
+/* iframe */
+iframe {
+  width: 100%;
+}
+
+/* ヘッダー ------------------------------- */
+.page-header {
+  padding-top: 0.5rem;
+}
+
+.logo {
+  width: 210px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #432;
+}
+.main-nav a:hover {
+  color: #0db;
+}
+/* ヘッダーカバー画像
+------------------------------- */
+.cover {
+  background-size: cover;
+  background-position: center bottom;
+  height: 800px;
+}
+/* NEWSページのヘッダー画像 */
+.sub-cover {
+  background-size: cover;
+  background-position: center bottom;
+  height: 528px;
+  margin-bottom: 4rem;
+}
+
+/* HOME
+------------------------------- */
+/* ↓スマホサイズのホーム画像（PC用は後で上書き） */
+.cover-home {
+  background-image: url(../images/cover-home-s.webp);
+}
+
+.about {
+  max-width: 736px;
+  padding: 0 1.5rem;
+  margin: 3rem auto 0;
+}
+.about p {
+  margin-bottom: 3rem;
+}
+
+/* NEWS
+------------------------------- */
+/* ↓スマホサイズのホーム画像（PC用は後で上書き） */
+.cover-news {
+  background-image: url(../images/cover-news-s.webp);
+}
+/* 記事部分 */
+.post {
+  margin-bottom: 3rem;
+}
+.post-title {
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+}
+.post-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.post-cat {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+.post-cat a {
+  color: #432;
+  background-color: #faf7f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+}
+.post-cat a:hover {
+  background-color: #c9c2bc;
+}
+
+.post-date {
+  font-size: 0.875rem;
+}
+
+.post-thumbnail {
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+.post p {
+  margin-bottom: 1.5rem;
+  line-height: 2;
+}
+
+/* サイドバー */
+.side-menu {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.side-menu li {
+  border-bottom: 1px solid #c9c2bc;
+}
+.side-menu a {
+  color: #432;
+  display: block;
+  padding: 1rem;
+}
+.side-menu a:hover {
+  color: #0bd;
+}
+
+/* スマホでは非表示 → PCで表示 */
+.ad {
+  display: none;
+}
+
+/* MENU
+------------------------------- */
+.cover-menu {
+  background-image: url(../images/cover-menu-s.webp);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+.item img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.item p {
+  font-size: 0.875rem;
+}
+
+/* CONTACT
+------------------------------- */
+.cover-contact {
+  background-image: url(../images/cover-contact-s.webp);
+}
+
+/* 店舗情報 */
+.location {
+  margin-bottom: 3.5rem;
+}
+.location-info {
+  margin-bottom: 2rem;
+}
+.location-info .info {
+  padding: 0;
+}
+
+/* お問い合わせ */
+.email {
+  max-width: 916px;
+  background-color: #faf7f0;
+  border-radius: 48px;
+  padding: 1.5rem 2.5rem 2.5rem;
+  margin: 0 auto 2rem;
+}
+.email p {
+  margin: 1rem 0 2rem;
+}
+/* SNS */
+.sns-item {
+  margin-bottom: 2rem;
+}
+.sns-item .heading-medium {
+  margin-bottom: 0.5rem;
+}
+
+.sns-youtube {
+  aspect-ratio: 16/9;
+}
+.sns-youtube iframe {
+  height: 100%;
+}
+
+/* フッター */
+/* ↓スマホサイズのフッダー画像 */
+.page-footer {
+  background-image: url(../images/footer-s.webp);
+  background-size: cover;
+  background-position: center;
+  padding-top: 12rem;
+}
+
+.info {
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding: 0 1.5rem;
+  border-spacing: 0;
+}
+.info th,
+.info td {
+  border-bottom: 1px solid #c9c2bd;
+}
+
+.info th {
+  text-align: left;
+  font-weight: normal;
+  padding: 1rem;
+}
+
+.info td {
+  padding: 1rem 0;
+}
+
+.copyright {
+  background-color: #432;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 6rem;
+  color: #fff;
+}
+
+/* @media (min-width: 800px) {
+  .page-title {
+    color: red;
+  } */
+
+/*↓　PC用（デスクトップ版）　@media (min-width: 800px)｛｝の表記 ------------------------------- */
+@media (min-width: 800px) {
+  /* 見出し（スマホ → PCでサイズアップ） */
+  .page-title {
+    font-size: 5rem;
+  }
+  .heading-large {
+    font-size: 4rem;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  /* ヘッダー（PCでは横並びにする） */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+  .main-nav {
+    font-size: 2rem;
+  }
+
+  /* ヘッダーカバー画像 */
+  .sub-cover {
+    height: 400px;
+    margin-bottom: 6rem;
+  }
+
+  /* HOME（スマホ：s画像 → PC：l画像に切り替え） */
+  .cover-home {
+    background-image: url(../images/cover-home-l.webp);
+  }
+  .about {
+    margin: 4rem auto 0;
+  }
+
+  /* NEWS（スマホ：s画像 → PC：l画像に切り替え） */
+  .cover-news {
+    background-image: url(../images/cover-news-l.webp);
+  }
+
+  /* 記事＋サイドバーの2カラムレイアウト（PC用） */
+  .news-contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  .post {
+    width: 60%; /* 記事エリアを広めに（横幅の60%を使う） */ /* ← 3カラムは、60%に変更  */
+    order: 2;
+  }
+  .sidebar {
+    width: 22%; /* サイドバーは細めに（横幅の22%を使う） */
+    order: 3;
+  }
+  .ad {
+    order: 1; /* 表示の順番・PCでは広告を一番左に表示 */
+    display: block; /* .ad {display: none;}で、消す表示にしている→PCのみ３カラムで表示する ➡スマホでは非表示 → PCで表示 */
+  }
+
+  /* サイドバー見出しの調整*/
+  .sidebar .heading-medium {
+    line-height: 1; /* 行間を詰めて見出しをコンパクトに*/
+    margin-bottom: 1rem; /*見出しとリストの間に余白を作る（詰まり防止） */
+  }
+
+  /* MENU */
+  .cover-menu {
+    background-image: url(../images/cover-menu-l.webp);
+  }
+
+  .grid {
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item img {
+    margin-bottom: 0.5rem;
+  }
+  .item p {
+    font-size: 1rem;
+  }
+
+  .item-big {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  /* 大きい写真を隣の写真幅に合わせて微調整 */
+  .item-big img {
+    height: 94.5%;
+    width: 100%;
+  }
+
+  /* CONTACT */
+  .cover-contact {
+    background-image: url(../images/cover-contact-l.webp);
+  }
+
+  .location {
+    display: flex;
+    gap: 2rem;
+  }
+  .location-info {
+    width: 32%;
+  }
+  .location-info .info th {
+    padding-left: 2rem;
+  }
+  .location-map {
+    width: 64%;
+  }
+
+  .email {
+    margin-bottom: 4rem;
+  }
+  .sns {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    /* 縦→横のレイアウト切り替え時は、余白が邪魔になることがある
+　　　　その時 margin-bottom: 0 でリセットする */
+    margin-bottom: 0; /* ←下の余白を消してレイアウトを整える */
+  }
+  .sns-item {
+    flex: 1;
+  }
+
+  /* フッター（スマホ：s画像 → PC：l画像に切り替え） */
+  .page-footer {
+    background-image: url(../images/footer-l.webp);
+    padding-top: 12rem;
+  }
+  .info th {
+    padding-left: 2.5rem;
+  }
+}
